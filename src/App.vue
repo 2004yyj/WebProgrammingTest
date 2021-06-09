@@ -1,12 +1,24 @@
 <template>
   <div id="app">
+    <TodoHeader header="Todo List"/>
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/">내 할 일</router-link> |
+      <router-link to="/add">할 일 추가하기</router-link>
     </div>
     <router-view/>
   </div>
 </template>
+
+<script>
+import TodoHeader from "./components/TodoHeader"
+
+export default {
+  components: {
+    TodoHeader
+  }
+}
+</script>
+
 
 <style lang="scss">
 #app {
