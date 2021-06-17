@@ -1,28 +1,28 @@
 <template>
   <div id="app">
-    <TodoHeader header="Todo List"/>
-    <div id="nav">
-      <router-link to="/">내 할 일</router-link> |
-      <router-link to="/add">할 일 추가하기</router-link>
-    </div>
-    <router-view/>
+    <v-card>
+      <v-toolbar>
+        <v-toolbar-title>TodoList</v-toolbar-title>
+      </v-toolbar>
+      <div id="nav">
+        <router-link to="/">내 할 일</router-link> |
+        <router-link to="/myPage">소개</router-link>
+      </div>
+      <router-view/>
+    </v-card>
   </div>
 </template>
 
 <script>
-import TodoHeader from "./components/TodoHeader"
 
-export default {
-  components: {
-    TodoHeader
-  }
-}
+export default {}
 </script>
 
 
 <style lang="scss">
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+  font-family: Roboto, sans-serif; //Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
